@@ -1,7 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.redhat.sample</groupId>
-  <artifactId>microservice-spring</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.redhat.sample</groupId>
+	<artifactId>microservice-spring</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+
+
+	<parent>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-parent</artifactId>
+		<version>Edgware.M1</version>
+	</parent>
+
+
+	<properties>
+		<spring.boot>1.5.6.RELEASE</spring.boot>
+		<spring.boot.eureka>1.3.5.RELEASE</spring.boot.eureka>
+		<java.version>1.8</java.version>
+	</properties>
+
+
+	<modules>
+		<module>micro-base</module>
+		<module>micro-eureka</module>
+		<module>micro-svc-account</module>
+		<module>micro-svc-customer</module>
+		<module>micro-gateway</module>
+	</modules>
 </project>
